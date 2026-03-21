@@ -9,16 +9,16 @@ public class Program {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Digite seu nome: ");
-        String name = input.nextLine();
+        String nome = input.nextLine();
         System.out.print("Digite seu saldo: ");
         double saldo = input.nextDouble();
         input.nextLine();
-        Conta titularConta = new Conta(name, saldo);
+        Conta titularConta = new Conta(nome, saldo);
         System.out.println("----------------");
         System.out.println("Novo acesso");
         System.out.print("Digite seu nome: ");
-        name = input.nextLine();
-        Conta conta = new Conta(name);
+        nome = input.nextLine();
+        Conta conta = new Conta(nome);
 
         System.out.println(titularConta);
         System.out.println(conta);
