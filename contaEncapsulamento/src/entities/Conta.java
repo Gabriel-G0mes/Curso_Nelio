@@ -4,9 +4,31 @@ public class Conta {
     private String nome;
     private double saldo;
 
-
-    public void setSaldo(double saldo) {
+    public Conta(String nome, double saldo) {
+        this.nome = nome;
         this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    public void depositar(double valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+        }
+        else {
+            System.out.println("Valor inválido");
+        }
+    }
+
+    public void sacar(double valor) {
+        if (valor <= this.saldo && valor > 0) {
+            this.saldo -= valor;
+        }
+        else {
+            System.out.println("Valor inválido");
+        }
     }
 
 }
