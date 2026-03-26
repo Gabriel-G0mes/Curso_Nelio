@@ -13,12 +13,14 @@ public class Conta {
         return this.saldo;
     }
 
+    public String getNome() { return this.nome; }
+
     public void depositar(double valor) {
         if (valor > 0) {
             this.saldo += valor;
         }
         else {
-            System.out.println("Valor inválido");
+            System.out.println("Depósito inválido");
         }
     }
 
@@ -27,8 +29,12 @@ public class Conta {
             this.saldo -= valor;
         }
         else {
-            System.out.println("Valor inválido");
+            System.out.println("Saque inválido");
         }
+    }
+
+    public String mensagemSaldo(){
+        return String.format("%s seu saldo atual é de: %.2f", getNome(), getSaldo());
     }
 
 }
